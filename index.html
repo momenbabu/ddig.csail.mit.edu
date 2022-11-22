@@ -1,1 +1,355 @@
-Hello
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr" prefix="content: http://purl.org/rss/1.0/modules/content/  dc: http://purl.org/dc/terms/  foaf: http://xmlns.com/foaf/0.1/  og: http://ogp.me/ns#  rdfs: http://www.w3.org/2000/01/rdf-schema#  schema: http://schema.org/  sioc: http://rdfs.org/sioc/ns#  sioct: http://rdfs.org/sioc/types#  skos: http://www.w3.org/2004/02/skos/core#  xsd: http://www.w3.org/2001/XMLSchema# ">
+<head>
+  <meta charset="utf-8" /><script type="text/javascript">(window.NREUM||(NREUM={})).init={ajax:{deny_list:["bam.nr-data.net"]}};(window.NREUM||(NREUM={})).loader_config={licenseKey:"a26f390b95",applicationID:"98296332"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var i=e[n]={exports:{}};t[n][0].call(i.exports,function(e){var i=t[n][1][e];return r(i||e)},i,i.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(t,e,n){function r(){}function i(t,e,n,r){return function(){return s.recordSupportability("API/"+e+"/called"),o(t+e,[u.now()].concat(c(arguments)),n?null:this,r),n?void 0:this}}var o=t("handle"),a=t(9),c=t(10),f=t("ee").get("tracer"),u=t("loader"),s=t(4),d=NREUM;"undefined"==typeof window.newrelic&&(newrelic=d);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",v=l+"ixn-";a(p,function(t,e){d[e]=i(l,e,!0,"api")}),d.addPageAction=i(l,"addPageAction",!0),d.setCurrentRouteName=i(l,"routeName",!0),e.exports=newrelic,d.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(t,e){var n={},r=this,i="function"==typeof e;return o(v+"tracer",[u.now(),t,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return e.apply(this,arguments)}catch(t){throw f.emit("fn-err",[arguments,this,t],n),t}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){m[e]=i(v,e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),s.recordSupportability("API/noticeError/called"),o("err",[t,u.now(),!1,e])}},{}],2:[function(t,e,n){function r(t){if(NREUM.init){for(var e=NREUM.init,n=t.split("."),r=0;r<n.length-1;r++)if(e=e[n[r]],"object"!=typeof e)return;return e=e[n[n.length-1]]}}e.exports={getConfiguration:r}},{}],3:[function(t,e,n){var r=!1;try{var i=Object.defineProperty({},"passive",{get:function(){r=!0}});window.addEventListener("testPassive",null,i),window.removeEventListener("testPassive",null,i)}catch(o){}e.exports=function(t){return r?{passive:!0,capture:!!t}:!!t}},{}],4:[function(t,e,n){function r(t,e){var n=[a,t,{name:t},e];return o("storeMetric",n,null,"api"),n}function i(t,e){var n=[c,t,{name:t},e];return o("storeEventMetrics",n,null,"api"),n}var o=t("handle"),a="sm",c="cm";e.exports={constants:{SUPPORTABILITY_METRIC:a,CUSTOM_METRIC:c},recordSupportability:r,recordCustom:i}},{}],5:[function(t,e,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=t(11);e.exports=r,e.exports.offset=a,e.exports.getLastTimestamp=i},{}],6:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?l("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&l("timing",["fcp",Math.floor(t.startTime)])})}function i(t,e){var n=t.getEntries();if(n.length>0){var r=n[n.length-1];if(u&&u<r.startTime)return;var i=[r],o=a({});o&&i.push(o),l("lcp",i)}}function o(t){t.getEntries().forEach(function(t){t.hadRecentInput||l("cls",[t])})}function a(t){var e=navigator.connection||navigator.mozConnection||navigator.webkitConnection;if(e)return e.type&&(t["net-type"]=e.type),e.effectiveType&&(t["net-etype"]=e.effectiveType),e.rtt&&(t["net-rtt"]=e.rtt),e.downlink&&(t["net-dlink"]=e.downlink),t}function c(t){if(t instanceof y&&!w){var e=Math.round(t.timeStamp),n={type:t.type};a(n),e<=v.now()?n.fid=v.now()-e:e>v.offset&&e<=Date.now()?(e-=v.offset,n.fid=v.now()-e):e=v.now(),w=!0,l("timing",["fi",e,n])}}function f(t){"hidden"===t&&(u=v.now(),l("pageHide",[u]))}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var u,s,d,p,l=t("handle"),v=t("loader"),m=t(8),g=t(3),y=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){s=new PerformanceObserver(r);try{s.observe({entryTypes:["paint"]})}catch(h){}d=new PerformanceObserver(i);try{d.observe({entryTypes:["largest-contentful-paint"]})}catch(h){}p=new PerformanceObserver(o);try{p.observe({type:"layout-shift",buffered:!0})}catch(h){}}if("addEventListener"in document){var w=!1,b=["click","keydown","mousedown","pointerdown","touchstart"];b.forEach(function(t){document.addEventListener(t,c,g(!1))})}m(f)}},{}],7:[function(t,e,n){function r(t,e){if(!i)return!1;if(t!==i)return!1;if(!e)return!0;if(!o)return!1;for(var n=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}e.exports={agent:i,version:o,match:r}},{}],8:[function(t,e,n){function r(t){function e(){t(c&&document[c]?document[c]:document[o]?"hidden":"visible")}"addEventListener"in document&&a&&document.addEventListener(a,e,i(!1))}var i=t(3);e.exports=r;var o,a,c;"undefined"!=typeof document.hidden?(o="hidden",a="visibilitychange",c="visibilityState"):"undefined"!=typeof document.msHidden?(o="msHidden",a="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(o="webkitHidden",a="webkitvisibilitychange",c="webkitVisibilityState")},{}],9:[function(t,e,n){function r(t,e){var n=[],r="",o=0;for(r in t)i.call(t,r)&&(n[o]=e(r,t[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],10:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,i=n-e||0,o=Array(i<0?0:i);++r<i;)o[r]=t[e+r];return o}e.exports=r},{}],11:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function i(t){function e(t){return t&&t instanceof r?t:t?u(t,f,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!l.aborted||o){t&&a&&t(n,r,i);for(var c=e(i),f=m(n),u=f.length,s=0;s<u;s++)f[s].apply(c,r);var p=d[w[n]];return p&&p.push([b,n,r,c]),c}}function o(t,e){h[t]=m(t).concat(e)}function v(t,e){var n=h[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function m(t){return h[t]||[]}function g(t){return p[t]=p[t]||i(n)}function y(t,e){l.aborted||s(t,function(t,n){e=e||"feature",w[n]=e,e in d||(d[e]=[])})}var h={},w={},b={on:o,addEventListener:o,removeEventListener:v,emit:n,get:g,listeners:m,context:e,buffer:y,abort:c,aborted:!1};return b}function o(t){return u(t,f,a)}function a(){return new r}function c(){(d.api||d.feature)&&(l.aborted=!0,d=l.backlog={})}var f="nr@context",u=t("gos"),s=t(9),d={},p={},l=e.exports=i();e.exports.getOrSetContext=o,l.backlog=d},{}],gos:[function(t,e,n){function r(t,e,n){if(i.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return t[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){i.buffer([t],r),i.emit(t,e,n)}var i=t("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,o,function(){return i++})}var i=1,o="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!M++){var t=T.info=NREUM.info,e=m.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return u.abort();f(x,function(e,n){t[e]||(t[e]=n)});var n=a();c("mark",["onload",n+T.offset],null,"api"),c("timing",["load",n]);var r=m.createElement("script");0===t.agent.indexOf("http://")||0===t.agent.indexOf("https://")?r.src=t.agent:r.src=l+"://"+t.agent,e.parentNode.insertBefore(r,e)}}function i(){"complete"===m.readyState&&o()}function o(){c("mark",["domContent",a()+T.offset],null,"api")}var a=t(5),c=t("handle"),f=t(9),u=t("ee"),s=t(7),d=t(2),p=t(3),l=d.getConfiguration("ssl")===!1?"http":"https",v=window,m=v.document,g="addEventListener",y="attachEvent",h=v.XMLHttpRequest,w=h&&h.prototype,b=!1;NREUM.o={ST:setTimeout,SI:v.setImmediate,CT:clearTimeout,XHR:h,REQ:v.Request,EV:v.Event,PR:v.Promise,MO:v.MutationObserver};var E=""+location,x={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1216.min.js"},O=h&&w&&w[g]&&!/CriOS/.test(navigator.userAgent),T=e.exports={offset:a.getLastTimestamp(),now:a,origin:E,features:{},xhrWrappable:O,userAgent:s,disabled:b};if(!b){t(1),t(6),m[g]?(m[g]("DOMContentLoaded",o,p(!1)),v[g]("load",r,p(!1))):(m[y]("onreadystatechange",i),v[y]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var M=0}},{}],"wrap-function":[function(t,e,n){function r(t,e){function n(e,n,r,f,u){function nrWrapper(){var o,a,s,p;try{a=this,o=d(arguments),s="function"==typeof r?r(o,a):r||{}}catch(l){i([l,"",[o,a,f],s],t)}c(n+"start",[o,a,f],s,u);try{return p=e.apply(a,o)}catch(v){throw c(n+"err",[o,a,v],s,u),v}finally{c(n+"end",[o,a,p],s,u)}}return a(e)?e:(n||(n=""),nrWrapper[p]=e,o(e,nrWrapper,t),nrWrapper)}function r(t,e,r,i,o){r||(r="");var c,f,u,s="-"===r.charAt(0);for(u=0;u<e.length;u++)f=e[u],c=t[f],a(c)||(t[f]=n(c,s?f+r:r,i,f,o))}function c(n,r,o,a){if(!v||e){var c=v;v=!0;try{t.emit(n,r,o,e,a)}catch(f){i([f,n,r,o],t)}v=c}}return t||(t=s),n.inPlace=r,n.flag=p,n}function i(t,e){e||(e=s);try{e.emit("internal-error",t)}catch(n){}}function o(t,e,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(t);return r.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(o){i([o],n)}for(var a in t)l.call(t,a)&&(e[a]=t[a]);return e}function a(t){return!(t&&t instanceof Function&&t.apply&&!t[p])}function c(t,e){var n=e(t);return n[p]=t,o(t,n,s),n}function f(t,e,n){var r=t[e];t[e]=c(r,n)}function u(){for(var t=arguments.length,e=new Array(t),n=0;n<t;++n)e[n]=arguments[n];return e}var s=t("ee"),d=t(10),p="nr@original",l=Object.prototype.hasOwnProperty,v=!1;e.exports=r,e.exports.wrapFunction=c,e.exports.wrapInPlace=f,e.exports.argsToArray=u},{}]},{},["loader"]);</script>
+<script>(function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,"script","https://www.google-analytics.com/analytics.js","ga");ga("create", "UA-5382944-3", {"cookieDomain":"auto"});ga("set", "anonymizeIp", true);ga("send", "pageview");</script>
+<meta name="Generator" content="Drupal 9 (https://www.drupal.org)" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="icon" href="/themes/custom/csail/images/favicon.ico" type="image/vnd.microsoft.icon" />
+<link rel="canonical" href="https://www.csail.mit.edu/node/2873" />
+<link rel="shortlink" href="https://www.csail.mit.edu/node/2873" />
+
+  <title>Home Page | MIT CSAIL</title>
+  <link rel="stylesheet" media="all" href="/sites/default/files/css/css_x6LY7jfUpZjI6JLWrF-1vSFw5_MK8Vh0y1hu5TbPFjA.css" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_sJdoDlNP3JfketM2QNp1CdoBgDU9q32WD5Oq8gzz418.css" />
+<link rel="stylesheet" media="print" href="/sites/default/files/css/css_bxopm60Js0T5TqHTosvX2EqXCZaRISU4kFLVxy0WQaw.css" />
+
+  <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"","currentPath":"node\/2873","currentPathIsAdmin":false,"isFront":true,"currentLanguage":"en"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"fitvids":{"selectors":".node\r,.main-wrapper","custom_vendors":"","ignore_selectors":""},"google_analytics":{"trackOutbound":true,"trackMailto":true,"trackDownload":true,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc(x|m)?|dot(x|m)?|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt(x|m)?|pot(x|m)?|pps(x|m)?|ppam|sld(x|m)?|thmx|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls(x|m|b)?|xlt(x|m)|xlam|xml|z|zip","trackColorbox":true},"user":{"uid":0,"permissionsHash":"93e78a3f36d5585de87f6d42e888f6eb167bcf31de54b95e8aec1cf3380914cc"}}</script>
+<script src="/sites/default/files/js/js_1AVYjhQGCBXDWrqDrF560tiihMCzIOP-eN9qHNu5QWQ.js"></script>
+
+</head>
+<body class="no-sidebars path-frontpage page-node-type-home-page">
+  <a href="#main-content" class="visually-hidden focusable skip-link">
+    Skip to main content
+  </a>
+      
+  
+        <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+    <div role="document" class="page">
+      <div id="mobile-placeholder" class="mobile-header-placeholder"></div>
+    <header id="site-header" class="navigation" role="banner">
+      <div class="audience-menu nav">
+        <div class="outer-wrapper navigation-wrapper">
+          <nav aria-label="Info for" id="block-audiencemenu">
+    
+        
+              <ul class="menu">
+                    <li class="menu-item">
+        <a href="/students" data-drupal-link-system-path="node/2884">For Students</a>
+              </li>
+                <li class="menu-item">
+        <a href="http://cap.csail.mit.edu/" title="CSAIL Alliances Program website">For Industry</a>
+              </li>
+                <li class="menu-item">
+        <a href="/internal-resources" data-drupal-link-system-path="node/4866">For Members</a>
+              </li>
+                <li class="menu-item">
+        <a href="https://accessibility.mit.edu/" title="Accessibility">Accessibility</a>
+              </li>
+                <li class="menu-item">
+        <a href="/csail_login" data-drupal-link-system-path="csail_login">Login</a>
+              </li>
+        </ul>
+  
+
+
+  </nav>
+
+        </div>
+      </div>
+      <div class="outer-wrapper navigation-wrapper">
+        <div class="container header">
+                    <div class="main-menu-wrapper">
+            <div class="header-logo">
+              <a href="/" class="home-link">
+                <svg width="70px" height="40px" viewBox="0 0 150 86" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                    <g id="CSAIL_Primary_Regular_RGB" transform="translate(-2.000000, -4.000000)">
+                      <g id="Group" transform="translate(2.813800, 4.812400)">
+                        <path d="M117.1642,2.233 L117.1642,34.729 L128.2572,34.729 L128.2572,54.917 L139.6382,54.917 L149.1102,12.778 L117.1642,2.233 Z M117.1642,85.099 L133.9002,80.434 L137.7002,63.54 L117.1642,63.54 L117.1642,85.099 Z M27.8702,0 L19.0112,0 L16.3062,10.112 L15.7572,13.366 L15.4432,13.366 L14.8942,10.19 L11.9942,0 L3.1742,0 L3.1742,18.265 L8.6222,18.265 L8.6222,8.739 L8.4272,5.407 L8.7802,5.407 L12.3862,18.265 L18.6192,18.265 L22.1462,5.368 L22.4992,5.368 L22.3022,9.015 L22.3022,18.265 L27.8702,18.265 L27.8702,0 Z M33.7102,18.266 L40.0212,18.266 L40.0212,0 L33.7102,0 L33.7102,18.266 Z M44.1772,0 L60.5612,0 L60.5612,5.133 L55.5432,5.133 L55.5432,18.265 L49.2322,18.265 L49.2322,5.133 L44.1772,5.133 L44.1772,0 Z" id="Fill-1" fill="#898D8D"></path>
+                        <g id="Group-6" transform="translate(0.000000, 14.698700)">
+                          <path d="M74.5275,30.379 L76.5265,37.787 L70.9615,37.787 L72.9995,30.379 L73.6255,27.321 L73.9005,27.321 L74.5275,30.379 Z M111.7655,27.085 L107.8455,27.085 L107.8455,41.785 L111.7655,41.785 L111.7655,48.842 L92.9115,48.842 L92.9115,41.785 L96.8315,41.785 L96.8315,27.085 L92.9115,27.085 L92.9115,20.03 L111.7655,20.03 L111.7655,27.085 Z M93.5655,0 C84.6295,0 76.9855,1.843 73.6145,4.39 L67.8245,20.03 L80.2125,20.03 L90.7165,48.842 L79.1135,48.842 L77.8595,44.529 L69.7455,44.529 L68.4895,48.842 L57.1575,48.842 L52.6435,61.032 C55.7395,64.246 65.7755,66.755 78.0445,66.755 C89.5685,66.755 108.5015,64.167 117.1645,60.954 L117.1645,4.822 C113.9105,2.743 104.1105,0 93.5655,0 L93.5655,0 Z" id="Fill-2" fill="#F0B323"></path>
+                          <path d="M31.671,48.3302 L31.671,40.1782 C33.828,41.0002 37.121,41.5502 40.373,41.5502 C43.156,41.5502 44.254,41.1972 44.254,39.8252 C44.254,38.6862 43.354,38.4522 40.373,37.9432 C36.219,37.2382 31.515,36.1792 31.515,29.4762 C31.515,23.2052 35.71,19.2842 44.921,19.2842 C49.155,19.2842 53.348,20.0702 54.838,20.5392 L54.838,28.0262 C51.78,27.3592 49.075,26.9692 46.293,26.9692 C44.921,26.9692 43.156,27.0862 43.156,28.4172 C43.156,29.5942 44.177,29.8302 47.861,30.5742 C52.448,31.5152 55.975,33.0042 55.975,38.7672 C55.975,43.8222 52.879,49.5462 42.06,49.5462 C38.023,49.5462 33.318,48.8802 31.671,48.3302 L31.671,48.3302 Z M70.496,12.8122 L-7.10542736e-15,8.1912 L2.893,28.6612 C4.74,23.0992 9.731,19.2842 19.088,19.2842 C22.186,19.2842 25.401,19.8322 27.007,20.2652 L27.007,28.6142 C25.988,28.3002 23.205,27.9092 20.814,27.9092 C16.66,27.9092 13.562,29.3982 13.562,34.2972 C13.562,39.7862 17.482,41.0002 21.323,41.0002 C23.363,41.0002 24.577,40.8832 27.007,40.2972 L27.007,48.4502 C24.224,49.2702 22.147,49.5462 18.815,49.5462 C12.001,49.5462 7.678,47.5812 5.123,44.4512 L8.192,66.1672 L54.252,56.6872 L70.496,12.8122 Z" id="Fill-4" fill="#B94700"></path>
+                        </g>
+                      </g>
+                    </g>
+                  </g>
+                </svg>
+              </a>
+            </div>
+            <span class="header-mobile-wordmark">MIT CSAIL</span>
+            <div class="header-navigation nav">
+              <div class="menus-wrapper">
+                <nav aria-label="Main " id="block-csail-main-menu">
+    
+        
+              <ul class="menu navigation-menu">
+                    <li class="menu-item menu-item--collapsed nav-link">
+        <a href="/research" title="Research Areas, Impact Areas " data-drupal-link-system-path="node/9140">Research</a>
+              </li>
+                <li class="menu-item nav-link">
+        <a href="/people?roleFacets=Principal%20Investigators%2CCore/Dual%2CAssociates%2CEmeritus" data-drupal-link-query="{&quot;roleFacets&quot;:&quot;Principal Investigators,Core\/Dual,Associates,Emeritus&quot;}" data-drupal-link-system-path="node/9844">People</a>
+              </li>
+                <li class="menu-item nav-link">
+        <a href="/news" title="CSAIL Articles Videos and Talks" data-drupal-link-system-path="node/9142">News</a>
+              </li>
+                <li class="menu-item nav-link">
+        <a href="/events" title="CSAIL Event calendar" data-drupal-link-system-path="events">Events</a>
+              </li>
+                <li class="menu-item nav-link">
+        <a href="/about" title="Learn more about CSAIL" data-drupal-link-system-path="node/2851">About</a>
+              </li>
+        </ul>
+  
+
+
+  </nav>
+
+              </div>
+            </div>
+            <div class="header-icons">
+              <a href="javascript:void(0)" class="navigation-menu-button" id="js-mobile-menu">
+                <i class="fal fa-bars mobile-menu-button"></i>
+              </a>
+              <a href="javascript:void(0)" id="js-search-trigger"><i class="fal fa-search"></i></a>
+              <a target="_blank" href="http://web.mit.edu/">
+                <?xml version="1.0" encoding="UTF-8"?>
+                <svg class="mit-logo" width="49px" height="25px" viewBox="0 0 49 25" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <!-- Generator: Sketch 44 (41411) - http://www.bohemiancoding.com/sketch -->
+                  <title>MIT LOGO</title>
+                  <desc>Created with Sketch.</desc>
+                  <defs></defs>
+                  <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                    <g id="Black-nav" transform="translate(-1116.000000, -67.000000)">
+                      <g id="MIT-LOGO" transform="translate(1116.000000, 67.000000)">
+                        <polygon id="Fill-1" fill="#636363" points="17.1686747 25 22.439759 25 22.439759 0 17.1686747 0"></polygon>
+                        <polygon id="Fill-2" fill="#636363" points="0 25 5.27108434 25 5.27108434 0 0 0"></polygon>
+                        <polygon id="Fill-3" fill="#636363" points="8.58433735 17.0180723 13.8554217 17.0180723 13.8554217 0 8.58433735 0"></polygon>
+                        <polygon id="Fill-4" fill="#636363" points="25.753012 4.96987952 31.0240964 4.96987952 31.0240964 0.00015060241 25.753012 0.00015060241"></polygon>
+                        <polygon id="Fill-5" fill="#636363" points="34.4879518 25 39.7590361 25 39.7590361 7.98192771 34.4879518 7.98192771"></polygon>
+                        <polygon id="Fill-6" fill="#9F9F9F" points="25.753012 25 31.0240964 25 31.0240964 7.98192771 25.753012 7.98192771"></polygon>
+                        <polygon id="Fill-7" fill="#636363" points="34.4879518 4.96987952 48.3435241 4.96987952 48.3435241 0.00015060241 34.4879518 0.00015060241"></polygon>
+                      </g>
+                    </g>
+                  </g>
+                </svg>
+              </a>
+            </div>
+
+          </div>
+          <div class="header-mobile-navigation">
+            <div class="mobile-nav">
+              <div class="mobile-menu">
+                <nav aria-label="Main " id="block-csail-main-menu">
+    
+        
+              <ul class="menu navigation-menu">
+                    <li class="menu-item menu-item--collapsed nav-link">
+        <a href="/research" title="Research Areas, Impact Areas " data-drupal-link-system-path="node/9140">Research</a>
+              </li>
+                <li class="menu-item nav-link">
+        <a href="/people?roleFacets=Principal%20Investigators%2CCore/Dual%2CAssociates%2CEmeritus" data-drupal-link-query="{&quot;roleFacets&quot;:&quot;Principal Investigators,Core\/Dual,Associates,Emeritus&quot;}" data-drupal-link-system-path="node/9844">People</a>
+              </li>
+                <li class="menu-item nav-link">
+        <a href="/news" title="CSAIL Articles Videos and Talks" data-drupal-link-system-path="node/9142">News</a>
+              </li>
+                <li class="menu-item nav-link">
+        <a href="/events" title="CSAIL Event calendar" data-drupal-link-system-path="events">Events</a>
+              </li>
+                <li class="menu-item nav-link">
+        <a href="/about" title="Learn more about CSAIL" data-drupal-link-system-path="node/2851">About</a>
+              </li>
+        </ul>
+  
+
+
+  </nav>
+
+              </div>
+              <div class="mobile-audience-menu">
+                <nav aria-label="Info for" id="block-audiencemenu">
+    
+        
+              <ul class="menu">
+                    <li class="menu-item">
+        <a href="/students" data-drupal-link-system-path="node/2884">For Students</a>
+              </li>
+                <li class="menu-item">
+        <a href="http://cap.csail.mit.edu/" title="CSAIL Alliances Program website">For Industry</a>
+              </li>
+                <li class="menu-item">
+        <a href="/internal-resources" data-drupal-link-system-path="node/4866">For Members</a>
+              </li>
+                <li class="menu-item">
+        <a href="https://accessibility.mit.edu/" title="Accessibility">Accessibility</a>
+              </li>
+                <li class="menu-item">
+        <a href="/csail_login" data-drupal-link-system-path="csail_login">Login</a>
+              </li>
+        </ul>
+  
+
+
+  </nav>
+
+              </div>
+              <div class="mobile-info-menu">
+                <nav aria-label="Info Menu" id="block-infomenu">
+    
+        
+              <ul class="menu">
+                    <li class="menu-item">
+        <a href="http://live-csail.pantheonsite.io/contact-us">Contact</a>
+              </li>
+                <li class="menu-item">
+        <a href="mailto:news@csail.mit.edu?subject=CSAIL%20Media%20Inquiry">Press Requests</a>
+              </li>
+                <li class="menu-item">
+        <a href="https://accessibility.mit.edu/">Accessibility</a>
+              </li>
+        </ul>
+  
+
+
+  </nav>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="search-section">
+        <div class="outer-wrapper">
+
+          <form action="/search" method="get" id="search-block-form" accept-charset="UTF-8">
+            <label for="edit-keys" class="visually-hidden">Search</label>
+              <input title="Enter the terms you wish to search for." placeholder="Search CSAIL" data-drupal-selector="edit-keys" type="search" id="edit-keys" name="keywords" value="" size="15" maxlength="128" class="form-search"><i id="js-search-close" class="fal fa-times"></i>
+              <div data-drupal-selector="edit-actions" class="form-actions js-form-wrapper form-wrapper" id="edit-actions"><input data-drupal-selector="edit-submit" type="submit" id="edit-submit" value="Search" class="button js-form-submit form-submit">
+            </div>
+
+          </form>
+        </div>
+      </div>
+    </header>
+  
+      <section id="featured">
+      <div class="columns">
+          <div class="">
+    <div data-drupal-messages-fallback class="hidden"></div>
+
+  </div>
+
+      </div>
+    </section>
+  
+  
+  <main role="main" class="main-wrapper">
+    <a id="main-content" tabindex="-1"></a>
+
+    
+    <section id="content">
+      
+        <div class="">
+    
+
+<div id="block-csail-content" class="block block-system block-system-main-block">
+  
+    
+       
+
+
+<div id="pano" style="height: calc(100vh - 106px) !important;"></div>
+<div id="mobile-home"></div>
+
+    <div class="featured-home hidden-tablet-up">
+     <h4 class="monobold-header">FEATURED</h4>
+     
+      <div class="field field--name-field-homepage-featured-links field--type-link field--label-hidden field__items">
+              <div class="field__item"><a href="/csail_videoarchive">Videoarchive</a></div>
+              <div class="field__item"><a href="https://tedxmit.org/spring-2019-computing-the-future">TEDxMIT: Computing the Future</a></div>
+          </div>
+  
+   </div>
+ 
+ <div role="navigation" aria-labelledby="Rotate Panorama" class="off-screen" style="height: 0;>
+  <h2>Rotate Panorama</h2>
+  <a href='#' class="rotate-pano">See more</a>
+</div>
+
+ <style>body.path-frontpage #site-footer { display: none; }</style>
+
+  </div>
+  </div>
+
+      
+    </section>
+
+      </main>
+
+      <footer id="site-footer" role="contentinfo">
+      
+              <section class="footer-bottom">
+                    <h2>MIT CSAIL</h2>
+          <div class="footer-sections">
+            
+
+<div id="block-footerinfotextblock" class="block block-block-content block-block-content65e2ef2c-038f-4dc6-b6ed-2ff88073b056">
+  
+    
+      
+            <div class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item"><p>Massachusetts Institute of Technology</p>
+
+<p>Computer Science &amp; Artificial Intelligence Laboratory</p>
+
+<p>32 Vassar St, Cambridge MA 02139</p></div>
+      
+  </div>
+            <nav aria-label="Info Menu" id="block-infomenu">
+    
+        
+              <ul class="menu">
+                    <li class="menu-item">
+        <a href="http://live-csail.pantheonsite.io/contact-us">Contact</a>
+              </li>
+                <li class="menu-item">
+        <a href="mailto:news@csail.mit.edu?subject=CSAIL%20Media%20Inquiry">Press Requests</a>
+              </li>
+                <li class="menu-item">
+        <a href="https://accessibility.mit.edu/">Accessibility</a>
+              </li>
+        </ul>
+  
+
+
+  </nav>
+
+            
+
+<div id="block-footersocialinfoblock" class="block block-block-content block-block-content6b8d3d82-2fda-46aa-8055-09f052768ffd">
+  
+    
+          <div class="footer-social-icons">
+              <a aria-label="twitter" target="_blank" href="https://twitter.com/MIT_CSAIL"><i class="fab fa-twitter-square"></i></a>
+                    <a aria-label="facebook" target="_blank" href="https://www.facebook.com/MITCSAIL/"><i class="fab fa-facebook-square"></i></a>
+                    <a aria-label="youtube" target="_blank" href="https://www.youtube.com/user/MITCSAIL"><i class="fab fa-youtube-square"></i></a>
+                    <a aria-label="instagram" target="_blank" href="https://www.instagram.com/mit_csail/"><i class="fab fa-instagram"></i></a>
+          </div>
+    
+  </div>
+
+          </div>
+        </section>
+          </footer>
+  </div>
+
+  </div>
+
+  
+  
+  <script src="/sites/default/files/js/js_CWQc9BBwkcEylWsAHCVrbJlUO_qC-t-6qvGi8dNmMjE.js"></script>
+
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"a26f390b95","applicationID":"98296332","transactionName":"M1UGYRAAWRFUV0UKDAofJVYWCFgMGkRQBAY7UwVWCgQ=","queueTime":0,"applicationTime":13,"atts":"HxIFF1gaSh8=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>
